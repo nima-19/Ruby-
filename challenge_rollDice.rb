@@ -7,6 +7,7 @@ def ask_user()
 end
 ask_user()
 a=0
+grandTotal=0
 while gets.chomp=="yes" do
 		puts "Previous value #{a}"
 		puts "Dice value #{b=roll_dice()}"
@@ -17,4 +18,5 @@ while gets.chomp=="yes" do
 		end
 		ask_user()
 end
+puts "GrandTotal is #{grandTotal=grandTotal+a}"
 puts "Thank you!"
