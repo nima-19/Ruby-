@@ -7,10 +7,14 @@ def ask_user()
 end
 ask_user()
 a=0
-while gets.chomp=="yes"
+while gets.chomp=="yes" do
 		puts "Previous value #{a}"
 		puts "Dice value #{b=roll_dice()}"
-		puts "Round Total is #{a=a+b}"
+		if b==1
+		   	puts "Round total is #{a=0}"
+		else
+			puts "Round Total is #{a=a+b}"
+		end
 		ask_user()
 end
 puts "Thank you!"
