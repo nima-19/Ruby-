@@ -4,11 +4,14 @@ end
 
 def ask_user()
 	puts "Do you want to play(yes/hold)?"
+	gets.chomp
 end
-ask_user()
-a=0
+ans=ask_user()
 grandTotal=0
-while gets.chomp=="yes" do
+
+def playAgain()
+	a=0
+	while (ans=="yes" || ans=="hold") do
 		puts "Previous value #{a}"
 		puts "Dice value #{b=roll_dice()}"
 		if b==1
@@ -16,7 +19,18 @@ while gets.chomp=="yes" do
 		else
 			puts "Round Total is #{a=a+b}"
 		end
-		ask_user()
-end
-puts "GrandTotal is #{grandTotal=grandTotal+a}"
+		ans=ask_user()
+	end
+	if (ans=="hold")
+		puts "GrandTotal is #{grandTotal=grandTotal+a}" #a=roundTotal
+	end
+		
+	a=0 # a=roundTotal
+	ans=ask_user()
+	playAgain()
+
+	if (grandTotal>=50)
+	puts "Winner!"
+	end
+end		
 puts "Thank you!"
