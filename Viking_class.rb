@@ -32,6 +32,10 @@ class Viking
 	def shout(str)
 		 str
 	end
+
+	def self.saver(god)
+		god
+	end
 end
 oleg = Viking.new("oleg",19,100)
 puts oleg.attack("oleg")
@@ -41,3 +45,4 @@ puts oleg.name
 puts oleg.age=(25)
 puts oleg.strength
 puts oleg.take_damage
+puts Viking.saver("deu")
