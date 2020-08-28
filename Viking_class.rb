@@ -24,6 +24,13 @@ class Viking
 		@health = new_health
 	end
 
+	def take_damage
+		self.shout("Ouch!!!")
+	end
+	
+	def shout(str)
+		 str
+	end
 end
 oleg = Viking.new("oleg",19,100,8)
 puts oleg.attack("oleg")
@@ -32,3 +39,4 @@ puts oleg.health=(85)
 puts oleg.name
 puts oleg.age=(25)
 puts oleg.strength
+puts oleg.take_damage
