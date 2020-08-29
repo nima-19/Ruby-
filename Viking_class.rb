@@ -4,11 +4,11 @@ class Viking
 	attr_writer :age,:enemy
 	attr_reader :strength 
 	
-	def initialize(name,age,health)	#initialize
+	def initialize(name,age,health,strength)	#initialize
 		@name = name
 		@age = age
 		@health = health
-		@strength = @@starting_health
+		@strength = strength
 	end
 
 	def attack(enemy)			#instance variables also denoted by self
@@ -36,8 +36,15 @@ class Viking
 	def self.saver(god)
 		god
 	end
+
+	def self.create_worrior(name)
+		age = rand * 20 + 15   
+        		health = [age * 5, 120].min
+        		strength = [age / 2, 10].min
+		Viking.new(name,age,health,strength)
+	end
 end
-oleg = Viking.new("oleg",19,100)
+oleg = Viking.create_worrior("Sten")
 puts oleg.attack("oleg")
 puts oleg.health
 puts oleg.health=(85)
