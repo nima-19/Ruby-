@@ -2,9 +2,15 @@ class Creature
 	def initialize(name)
 		@name = name
 	end
-	protected
+	#protected
+	private
 	def fight 
 		return "Punchs to chops"
+	end
+	public
+	def eat
+		puts "animals"
+		 fight()
 	end
 end
 class Dragon < Creature
@@ -15,3 +21,4 @@ class Dragon < Creature
 end
 c1 = Dragon.new("nims")
 c1.fight2()
+c1.eat()
