@@ -2,16 +2,16 @@ class Creature
 	def initialize(name)
 		@name = name
 	end
-	 
+	protected
 	def fight 
 		return "Punchs to chops"
 	end
 end
 class Dragon < Creature
-	def fight
+	def fight2
 		puts "Insted of breathing method"
-	end
-	
+		puts fight()
+	end	
 end
 c1 = Dragon.new("nims")
-c1.fight
+c1.fight2()
