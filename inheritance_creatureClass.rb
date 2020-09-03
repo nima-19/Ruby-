@@ -10,7 +10,7 @@ class Creature
 	public
 	def eat
 		puts "animals"
-		 fight()
+		fight()
 	end
 end
 class Dragon < Creature
